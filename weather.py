@@ -6,7 +6,7 @@ import requests
 
 def findWeather():
     global temperature, windSpeed, humidity, pressure, discription, city, weather_image
-    url = "http://api.openweathermap.org/data/2.5/weather?q={}&APPID=851432836a2e75d1e7c089fa9c4b7d27&units=metric".format(
+    url = "http://api.openweathermap.org/data/2.5/weather?q={}&APPID=<APP_ID>&units=metric".format(
         city.get())
     res = requests.get(url)
     data = res.json()
